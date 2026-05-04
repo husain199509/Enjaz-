@@ -928,12 +928,12 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 <!-- SEARCH -->
 
 <section class="search-section" id="search-section">
-  <div class="section-label">استكشف المواهب</div>
-  <h2 class="section-title">ابحث عن الخدمة اللي تحتاجها</h2>
-  <p class="section-desc">من التصميم إلى البناء، من الفن إلى التقنية — كل المهارات بمكان واحد</p>
+  <div class="section-label" id="searchLabel">استكشف المواهب</div>
+  <h2 class="section-title" id="searchTitle">ابحث عن الخدمة اللي تحتاجها</h2>
+  <p class="section-desc" id="searchDesc">من التصميم إلى البناء، من الفن إلى التقنية — كل المهارات بمكان واحد</p>
 
   <div class="search-box">
-    <input type="text" placeholder="ابحث عن: مصمم، نجار، مصور، مهندس...">
+    <input type="text" id="searchInput" placeholder="ابحث عن: مصمم، نجار، مصور، مهندس...">
     <button class="search-btn">🔍</button>
   </div>
 
@@ -949,7 +949,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
     <div class="cat-chip">🎵 موسيقى</div>
     <div class="cat-chip">🔧 صيانة</div>
     <div class="cat-chip">📊 محاسبة</div>
-    <div class="cat-chip">+ المزيد</div>
+    <div class="cat-chip" id="moreChip">+ المزيد</div>
   </div>
 </section>
 
@@ -1099,30 +1099,30 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 
 <section class="how-section" id="how-section">
   <div style="text-align:center;">
-    <div class="section-label">كيف يعمل إنجاز؟</div>
-    <h2 class="section-title">بسيط وسريع</h2>
-    <p class="section-desc">3 خطوات وتبدأ</p>
+    <div class="section-label" id="howLabel">كيف يعمل إنجاز؟</div>
+    <h2 class="section-title" id="howTitle">بسيط وسريع</h2>
+    <p class="section-desc" id="howDesc">3 خطوات وتبدأ</p>
   </div>
   <div class="how-grid">
     <div class="how-step">
       <div class="step-num"><span class="step-icon">📝</span></div>
-      <div class="step-title">سجّل حسابك</div>
-      <div class="step-desc">أنشئ بروفايلك في دقيقتين. أضف صورتك، خدماتك، وأسعارك. الأول 30 يوم مجاناً.</div>
+      <div class="step-title" id="step1Title">سجّل حسابك</div>
+      <div class="step-desc" id="step1Desc">أنشئ بروفايلك في دقيقتين. أضف صورتك، خدماتك، وأسعارك. الأول 30 يوم مجاناً.</div>
     </div>
     <div class="how-step">
       <div class="step-num"><span class="step-icon">✅</span></div>
-      <div class="step-title">أثبت هويتك</div>
-      <div class="step-desc">للمهن المتخصصة كالهندسة، ارفع شهادتك للحصول على شارة الموثوقية.</div>
+      <div class="step-title" id="step2Title">أثبت هويتك</div>
+      <div class="step-desc" id="step2Desc">للمهن المتخصصة كالهندسة، ارفع شهادتك للحصول على شارة الموثوقية.</div>
     </div>
     <div class="how-step">
       <div class="step-num"><span class="step-icon">💼</span></div>
-      <div class="step-title">ابدأ تشتغل</div>
-      <div class="step-desc">العملاء يبحثون ويجدونك. تواصلوا مباشرة وتفقوا على الشروط.</div>
+      <div class="step-title" id="step3Title">ابدأ تشتغل</div>
+      <div class="step-desc" id="step3Desc">العملاء يبحثون ويجدونك. تواصلوا مباشرة وتفقوا على الشروط.</div>
     </div>
     <div class="how-step">
       <div class="step-num"><span class="step-icon">⭐</span></div>
-      <div class="step-title">ابنِ سمعتك</div>
-      <div class="step-desc">اجمع التقييمات وارتق في نتائج البحث. كلما زادت تقييماتك، زادت فرصك.</div>
+      <div class="step-title" id="step4Title">ابنِ سمعتك</div>
+      <div class="step-desc" id="step4Desc">اجمع التقييمات وارتق في نتائج البحث. كلما زادت تقييماتك، زادت فرصك.</div>
     </div>
   </div>
 </section>
@@ -1130,38 +1130,38 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 <!-- PRICING -->
 
 <section class="pricing-section" id="pricing-section">
-  <div class="section-label">الباقات</div>
-  <h2 class="section-title">ابدأ مجاناً</h2>
-  <p class="section-desc">30 يوم تجربة مجانية لجميع الباقات</p>
+  <div class="section-label" id="pricingLabel">الباقات</div>
+  <h2 class="section-title" id="pricingTitle">ابدأ مجاناً</h2>
+  <p class="section-desc" id="pricingDesc">أول شهر مجاني — بعدها اختر الباقة المناسبة</p>
 
   <div class="pricing-grid">
     <div class="price-card">
-      <div class="price-plan">مجاني</div>
-      <div class="price-amount">0 <small>ر.ع / شهر</small></div>
-      <div class="price-desc">ابدأ بدون أي تكلفة</div>
+      <div class="price-plan" id="plan1Name">مجاني</div>
+      <div class="price-amount">0 <small id="plan1Period">ر.ع / أول شهر</small></div>
+      <div class="price-desc" id="plan1Desc">ابدأ بدون أي تكلفة — لمدة 30 يوم</div>
       <ul class="price-features">
-        <li>بروفايل أساسي</li>
-        <li>3 خدمات مدرجة</li>
-        <li>ظهور في البحث</li>
-        <li>تواصل مع العملاء</li>
+        <li id="f1">بروفايل أساسي</li>
+        <li id="f2">3 خدمات مدرجة</li>
+        <li id="f3">ظهور في البحث</li>
+        <li id="f4">تواصل مع العملاء</li>
       </ul>
-      <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-outline" style="width:100%; border-radius:12px;">ابدأ مجاناً</button></a>
+      <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-outline" id="plan1Btn" style="width:100%; border-radius:12px;">ابدأ مجاناً</button></a>
     </div>
 
 ```
 <div class="price-card featured">
-  <div class="price-badge">⭐ الأكثر طلباً</div>
-  <div class="price-plan">محترف</div>
-  <div class="price-amount">5 <small>ر.ع / شهر</small></div>
-  <div class="price-desc">للجادين في تطوير أعمالهم</div>
+  <div class="price-badge" id="featuredBadge">⭐ الأكثر طلباً</div>
+  <div class="price-plan" id="plan2Name">محترف</div>
+  <div class="price-amount">5 <small id="plan2Period">ر.ع / شهر</small></div>
+  <div class="price-desc" id="plan2Desc">بعد انتهاء الشهر المجاني</div>
   <ul class="price-features">
-    <li>بروفايل مميز</li>
-    <li>خدمات غير محدودة</li>
-    <li>أولوية في البحث</li>
-    <li>شارة الموثوقية</li>
-    <li>إحصائيات وتحليلات</li>
+    <li id="p1">بروفايل مميز</li>
+    <li id="p2">خدمات غير محدودة</li>
+    <li id="p3">أولوية في البحث</li>
+    <li id="p4">شارة الموثوقية</li>
+    <li id="p5">إحصائيات وتحليلات</li>
   </ul>
-  <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-gold" style="width:100%; border-radius:12px;">ابدأ تجربتك</button></a>
+  <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-gold" id="plan2Btn" style="width:100%; border-radius:12px;">ابدأ تجربتك المجانية</button></a>
 </div>
 ```
 
@@ -1171,10 +1171,10 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 <!-- CTA -->
 
 <section class="cta-section" id="contact-section">
-  <h2 class="cta-title">جاهز تبدأ؟ 🚀</h2>
-  <p class="cta-desc">انضم لمئات المحترفين العُمانيين على منصة إنجاز</p>
+  <h2 class="cta-title" id="ctaTitle">جاهز تبدأ؟ 🚀</h2>
+  <p class="cta-desc" id="ctaDesc">انضم لمئات المحترفين العُمانيين على منصة إنجاز</p>
   <div style="text-align:center;">
-    <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-gold" style="border-radius:14px; padding:18px 48px; font-size:18px;">🚀 سجّل الآن — مجاناً</button></a>
+    <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-gold" id="ctaBtn" style="border-radius:14px; padding:18px 48px; font-size:18px;">🚀 سجّل الآن — مجاناً</button></a>
   </div>
 </section>
 
@@ -1198,34 +1198,46 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 
   const translations = {
     ar: {
-      navExplore: 'استكشف الخدمات',
-      navHow: 'كيف يعمل؟',
-      navPricing: 'الباقات',
-      navContact: 'تواصل معنا',
-      navRegister: 'سجّل خدمتك',
+      dir: 'rtl', lang: 'EN',
+      navExplore: 'استكشف الخدمات', navHow: 'كيف يعمل؟', navPricing: 'الباقات', navContact: 'تواصل معنا', navRegister: 'سجّل خدمتك',
       heroBadge: 'منصة عُمانية لتمكين المواهب والمهارات',
       heroTitle: 'سجّل مهارتك<br><span class="gold">واحصل على عمل</span>',
       heroSub: 'Register Your Skills. Get Hired.',
       heroDesc: 'منصة إنجاز تربط أصحاب المهارات والحرف بمن يحتاجهم.<br>سواء كنت مصمم، مهندس، مصور، نجار، أو أي حرفة أخرى — مكانك هنا.',
-      heroRegisterBtn: '🚀 سجّل خدمتك مجاناً',
-      heroSearchBtn: '🔍 ابحث عن محترف',
-      lang: 'EN',
-      dir: 'rtl'
+      heroRegisterBtn: '🚀 سجّل خدمتك مجاناً', heroSearchBtn: '🔍 ابحث عن محترف',
+      searchLabel: 'استكشف المواهب', searchTitle: 'ابحث عن الخدمة اللي تحتاجها', searchDesc: 'من التصميم إلى البناء، من الفن إلى التقنية — كل المهارات بمكان واحد', searchPlaceholder: 'ابحث عن: مصمم، نجار، مصور، مهندس...',
+      howLabel: 'كيف يعمل إنجاز؟', howTitle: 'بسيط وسريع', howDesc: '3 خطوات وتبدأ',
+      step1Title: 'سجّل حسابك', step1Desc: 'أنشئ بروفايلك في دقيقتين. أضف صورتك، خدماتك، وأسعارك. الأول 30 يوم مجاناً.',
+      step2Title: 'أثبت هويتك', step2Desc: 'للمهن المتخصصة كالهندسة، ارفع شهادتك للحصول على شارة الموثوقية.',
+      step3Title: 'ابدأ تشتغل', step3Desc: 'العملاء يبحثون ويجدونك. تواصلوا مباشرة وتفقوا على الشروط.',
+      step4Title: 'ابنِ سمعتك', step4Desc: 'اجمع التقييمات وارتق في نتائج البحث. كلما زادت تقييماتك، زادت فرصك.',
+      pricingLabel: 'الباقات', pricingTitle: 'ابدأ مجاناً', pricingDesc: 'أول شهر مجاني — بعدها اختر الباقة المناسبة',
+      plan1Name: 'مجاني', plan1Period: 'ر.ع / أول شهر', plan1Desc: 'ابدأ بدون أي تكلفة — لمدة 30 يوم', plan1Btn: 'ابدأ مجاناً',
+      f1: 'بروفايل أساسي', f2: '3 خدمات مدرجة', f3: 'ظهور في البحث', f4: 'تواصل مع العملاء',
+      featuredBadge: '⭐ الأكثر طلباً', plan2Name: 'محترف', plan2Period: 'ر.ع / شهر', plan2Desc: 'بعد انتهاء الشهر المجاني', plan2Btn: 'ابدأ تجربتك المجانية',
+      p1: 'بروفايل مميز', p2: 'خدمات غير محدودة', p3: 'أولوية في البحث', p4: 'شارة الموثوقية', p5: 'إحصائيات وتحليلات',
+      ctaTitle: 'جاهز تبدأ؟ 🚀', ctaDesc: 'انضم لمئات المحترفين العُمانيين على منصة إنجاز', ctaBtn: '🚀 سجّل الآن — مجاناً'
     },
     en: {
-      navExplore: 'Explore Services',
-      navHow: 'How it Works',
-      navPricing: 'Pricing',
-      navContact: 'Contact Us',
-      navRegister: 'Register',
+      dir: 'ltr', lang: 'عر',
+      navExplore: 'Explore Services', navHow: 'How it Works', navPricing: 'Pricing', navContact: 'Contact Us', navRegister: 'Register',
       heroBadge: 'Omani Platform for Skills & Talent',
       heroTitle: 'Register Your Skills<br><span class="gold">& Get Hired</span>',
       heroSub: 'سجّل مهارتك. واحصل على عمل.',
-      heroDesc: 'Injaz connects skilled professionals with those who need them.<br>Whether you\'re a designer, engineer, photographer, or carpenter — you belong here.',
-      heroRegisterBtn: '🚀 Register Free',
-      heroSearchBtn: '🔍 Find a Professional',
-      lang: 'عر',
-      dir: 'ltr'
+      heroDesc: "Injaz connects skilled professionals with those who need them.<br>Whether you're a designer, engineer, photographer, or carpenter — you belong here.",
+      heroRegisterBtn: '🚀 Register Free', heroSearchBtn: '🔍 Find a Professional',
+      searchLabel: 'Explore Talent', searchTitle: 'Find the Service You Need', searchDesc: 'From design to construction, from art to tech — all skills in one place', searchPlaceholder: 'Search for: designer, carpenter, photographer...',
+      howLabel: 'How Injaz Works', howTitle: 'Simple & Fast', howDesc: '3 steps and you\'re in',
+      step1Title: 'Register', step1Desc: 'Create your profile in minutes. Add your photo, services, and prices. First 30 days free.',
+      step2Title: 'Verify Identity', step2Desc: 'For specialized professions like engineering, upload your certificate to get a verified badge.',
+      step3Title: 'Start Working', step3Desc: 'Clients find you and contact you directly to agree on terms.',
+      step4Title: 'Build Your Reputation', step4Desc: 'Collect reviews and rise in search results. More reviews = more opportunities.',
+      pricingLabel: 'Pricing', pricingTitle: 'Start Free', pricingDesc: 'First month free — then choose your plan',
+      plan1Name: 'Free', plan1Period: 'OMR / First Month', plan1Desc: 'Start with no cost — for 30 days', plan1Btn: 'Start Free',
+      f1: 'Basic Profile', f2: '3 Listed Services', f3: 'Search Visibility', f4: 'Client Communication',
+      featuredBadge: '⭐ Most Popular', plan2Name: 'Pro', plan2Period: 'OMR / month', plan2Desc: 'After free trial ends', plan2Btn: 'Start Free Trial',
+      p1: 'Featured Profile', p2: 'Unlimited Services', p3: 'Priority in Search', p4: 'Verified Badge', p5: 'Analytics & Insights',
+      ctaTitle: 'Ready to Start? 🚀', ctaDesc: 'Join hundreds of Omani professionals on Injaz', ctaBtn: '🚀 Register Now — Free'
     }
   };
 
@@ -1233,21 +1245,13 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
     isArabic = !isArabic;
     const lang = isArabic ? 'ar' : 'en';
     const t = translations[lang];
-
     document.documentElement.setAttribute('dir', t.dir);
     document.documentElement.setAttribute('lang', lang);
-
-    document.getElementById('navExplore').textContent = t.navExplore;
-    document.getElementById('navHow').textContent = t.navHow;
-    document.getElementById('navPricing').textContent = t.navPricing;
-    document.getElementById('navContact').textContent = t.navContact;
-    document.getElementById('navRegister').textContent = t.navRegister;
-    document.getElementById('heroBadge').textContent = t.heroBadge;
+    const ids = ['navExplore','navHow','navPricing','navContact','navRegister','heroBadge','heroSub','heroRegisterBtn','heroSearchBtn','searchLabel','searchTitle','searchDesc','howLabel','howTitle','howDesc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','step4Title','step4Desc','pricingLabel','pricingTitle','pricingDesc','plan1Name','plan1Period','plan1Desc','plan1Btn','f1','f2','f3','f4','featuredBadge','plan2Name','plan2Period','plan2Desc','plan2Btn','p1','p2','p3','p4','p5','ctaTitle','ctaDesc','ctaBtn'];
+    ids.forEach(id => { const el = document.getElementById(id); if(el) el.textContent = t[id]; });
     document.getElementById('heroTitle').innerHTML = t.heroTitle;
-    document.getElementById('heroSub').textContent = t.heroSub;
     document.getElementById('heroDesc').innerHTML = t.heroDesc;
-    document.getElementById('heroRegisterBtn').textContent = t.heroRegisterBtn;
-    document.getElementById('heroSearchBtn').textContent = t.heroSearchBtn;
+    document.getElementById('searchInput').placeholder = t.searchPlaceholder;
     document.getElementById('langBtn').textContent = t.lang;
   }
 
