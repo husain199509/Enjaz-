@@ -865,19 +865,19 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
   <div class="logo">
     <div class="logo-icon">⚡</div>
     <div>
-      <div class="logo-text">إنجاز</div>
+      <div class="logo-text" id="logoText">إنجاز</div>
       <div class="logo-sub">Injaz Platform</div>
     </div>
   </div>
   <ul class="nav-links">
-    <li><a href="#">استكشف الخدمات</a></li>
-    <li><a href="#">كيف يعمل؟</a></li>
-    <li><a href="#">الباقات</a></li>
-    <li><a href="#">تواصل معنا</a></li>
+    <li><a href="#search-section" id="navExplore">استكشف الخدمات</a></li>
+    <li><a href="#how-section" id="navHow">كيف يعمل؟</a></li>
+    <li><a href="#pricing-section" id="navPricing">الباقات</a></li>
+    <li><a href="#contact-section" id="navContact">تواصل معنا</a></li>
   </ul>
   <div class="nav-actions">
-    <button class="lang-toggle">EN</button>
-    <a href="register.html" style="text-decoration:none;"><button class="btn-primary">سجّل خدمتك</button></a>
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN</button>
+    <a href="register.html" style="text-decoration:none;"><button class="btn-primary" id="navRegister">سجّل خدمتك</button></a>
   </div>
 </nav>
 
@@ -886,20 +886,20 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">
-      <span>🇴🇲</span> منصة عُمانية لتمكين المواهب والمهارات
+      <span>🇴🇲</span> <span id="heroBadge">منصة عُمانية لتمكين المواهب والمهارات</span>
     </div>
-    <h1 class="hero-title">
+    <h1 class="hero-title" id="heroTitle">
       سجّل مهارتك<br>
       <span class="gold">واحصل على عمل</span>
     </h1>
-    <p class="hero-title-en">Register Your Skills. Get Hired.</p>
-    <p class="hero-desc">
+    <p class="hero-title-en" id="heroSub">Register Your Skills. Get Hired.</p>
+    <p class="hero-desc" id="heroDesc">
       منصة إنجاز تربط أصحاب المهارات والحرف بمن يحتاجهم.<br>
       سواء كنت مصمم، مهندس، مصور، نجار، أو أي حرفة أخرى — مكانك هنا.
     </p>
     <div class="hero-actions">
-      <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-gold">🚀 سجّل خدمتك مجاناً</button></a>
-      <button class="btn-large btn-outline">🔍 ابحث عن محترف</button>
+      <a href="register.html" style="text-decoration:none;"><button class="btn-large btn-gold" id="heroRegisterBtn">🚀 سجّل خدمتك مجاناً</button></a>
+      <a href="#search-section" style="text-decoration:none;"><button class="btn-large btn-outline" id="heroSearchBtn">🔍 ابحث عن محترف</button></a>
     </div>
   </div>
 </section>
@@ -927,7 +927,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 
 <!-- SEARCH -->
 
-<section class="search-section">
+<section class="search-section" id="search-section">
   <div class="section-label">استكشف المواهب</div>
   <h2 class="section-title">ابحث عن الخدمة اللي تحتاجها</h2>
   <p class="section-desc">من التصميم إلى البناء، من الفن إلى التقنية — كل المهارات بمكان واحد</p>
@@ -1097,7 +1097,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 
 <!-- HOW IT WORKS -->
 
-<section class="how-section">
+<section class="how-section" id="how-section">
   <div style="text-align:center;">
     <div class="section-label">كيف يعمل إنجاز؟</div>
     <h2 class="section-title">بسيط وسريع</h2>
@@ -1129,7 +1129,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 
 <!-- PRICING -->
 
-<section class="pricing-section">
+<section class="pricing-section" id="pricing-section">
   <div class="section-label">الباقات</div>
   <h2 class="section-title">ابدأ مجاناً</h2>
   <p class="section-desc">30 يوم تجربة مجانية لجميع الباقات</p>
@@ -1170,7 +1170,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 
 <!-- CTA -->
 
-<section class="cta-section">
+<section class="cta-section" id="contact-section">
   <h2 class="cta-title">جاهز تبدأ؟ 🚀</h2>
   <p class="cta-desc">انضم لمئات المحترفين العُمانيين على منصة إنجاز</p>
   <div style="text-align:center;">
@@ -1193,11 +1193,76 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 </footer>
 
 <script>
+  // Language Toggle
+  let isArabic = true;
+
+  const translations = {
+    ar: {
+      navExplore: 'استكشف الخدمات',
+      navHow: 'كيف يعمل؟',
+      navPricing: 'الباقات',
+      navContact: 'تواصل معنا',
+      navRegister: 'سجّل خدمتك',
+      heroBadge: 'منصة عُمانية لتمكين المواهب والمهارات',
+      heroTitle: 'سجّل مهارتك<br><span class="gold">واحصل على عمل</span>',
+      heroSub: 'Register Your Skills. Get Hired.',
+      heroDesc: 'منصة إنجاز تربط أصحاب المهارات والحرف بمن يحتاجهم.<br>سواء كنت مصمم، مهندس، مصور، نجار، أو أي حرفة أخرى — مكانك هنا.',
+      heroRegisterBtn: '🚀 سجّل خدمتك مجاناً',
+      heroSearchBtn: '🔍 ابحث عن محترف',
+      lang: 'EN',
+      dir: 'rtl'
+    },
+    en: {
+      navExplore: 'Explore Services',
+      navHow: 'How it Works',
+      navPricing: 'Pricing',
+      navContact: 'Contact Us',
+      navRegister: 'Register',
+      heroBadge: 'Omani Platform for Skills & Talent',
+      heroTitle: 'Register Your Skills<br><span class="gold">& Get Hired</span>',
+      heroSub: 'سجّل مهارتك. واحصل على عمل.',
+      heroDesc: 'Injaz connects skilled professionals with those who need them.<br>Whether you\'re a designer, engineer, photographer, or carpenter — you belong here.',
+      heroRegisterBtn: '🚀 Register Free',
+      heroSearchBtn: '🔍 Find a Professional',
+      lang: 'عر',
+      dir: 'ltr'
+    }
+  };
+
+  function toggleLang() {
+    isArabic = !isArabic;
+    const lang = isArabic ? 'ar' : 'en';
+    const t = translations[lang];
+
+    document.documentElement.setAttribute('dir', t.dir);
+    document.documentElement.setAttribute('lang', lang);
+
+    document.getElementById('navExplore').textContent = t.navExplore;
+    document.getElementById('navHow').textContent = t.navHow;
+    document.getElementById('navPricing').textContent = t.navPricing;
+    document.getElementById('navContact').textContent = t.navContact;
+    document.getElementById('navRegister').textContent = t.navRegister;
+    document.getElementById('heroBadge').textContent = t.heroBadge;
+    document.getElementById('heroTitle').innerHTML = t.heroTitle;
+    document.getElementById('heroSub').textContent = t.heroSub;
+    document.getElementById('heroDesc').innerHTML = t.heroDesc;
+    document.getElementById('heroRegisterBtn').textContent = t.heroRegisterBtn;
+    document.getElementById('heroSearchBtn').textContent = t.heroSearchBtn;
+    document.getElementById('langBtn').textContent = t.lang;
+  }
+
   // Category chips interaction
   document.querySelectorAll('.cat-chip').forEach(chip => {
     chip.addEventListener('click', () => {
       document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
+    });
+  });
+
+  // Pro card contact buttons
+  document.querySelectorAll('.contact-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.location.href = 'profile.html';
     });
   });
 
