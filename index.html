@@ -1183,12 +1183,12 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 <footer>
   <div>
     <div class="logo-text" style="font-size:20px; margin-bottom:4px;">إنجاز | Injaz</div>
-    <div class="footer-copy">© 2025 منصة إنجاز. جميع الحقوق محفوظة.</div>
+    <div class="footer-copy" id="footerCopy">© 2025 منصة إنجاز. جميع الحقوق محفوظة.</div>
   </div>
   <div class="footer-links">
-    <a href="#">سياسة الخصوصية</a>
-    <a href="#">الشروط والأحكام</a>
-    <a href="#">تواصل معنا</a>
+    <a href="#" id="footerPrivacy">سياسة الخصوصية</a>
+    <a href="#" id="footerTerms">الشروط والأحكام</a>
+    <a href="#" id="footerContact">تواصل معنا</a>
   </div>
 </footer>
 
@@ -1216,7 +1216,8 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       f1: 'بروفايل أساسي', f2: '3 خدمات مدرجة', f3: 'ظهور في البحث', f4: 'تواصل مع العملاء',
       featuredBadge: '⭐ الأكثر طلباً', plan2Name: 'محترف', plan2Period: 'ر.ع / شهر', plan2Desc: 'بعد انتهاء الشهر المجاني', plan2Btn: 'ابدأ تجربتك المجانية',
       p1: 'بروفايل مميز', p2: 'خدمات غير محدودة', p3: 'أولوية في البحث', p4: 'شارة الموثوقية', p5: 'إحصائيات وتحليلات',
-      ctaTitle: 'جاهز تبدأ؟ 🚀', ctaDesc: 'انضم لمئات المحترفين العُمانيين على منصة إنجاز', ctaBtn: '🚀 سجّل الآن — مجاناً'
+      ctaTitle: 'جاهز تبدأ؟ 🚀', ctaDesc: 'انضم لمئات المحترفين العُمانيين على منصة إنجاز', ctaBtn: '🚀 سجّل الآن — مجاناً',
+      footerCopy: '© 2025 منصة إنجاز. جميع الحقوق محفوظة.', footerPrivacy: 'سياسة الخصوصية', footerTerms: 'الشروط والأحكام', footerContact: 'تواصل معنا'
     },
     en: {
       dir: 'ltr', lang: 'عر',
@@ -1237,7 +1238,8 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       f1: 'Basic Profile', f2: '3 Listed Services', f3: 'Search Visibility', f4: 'Client Communication',
       featuredBadge: '⭐ Most Popular', plan2Name: 'Pro', plan2Period: 'OMR / month', plan2Desc: 'After free trial ends', plan2Btn: 'Start Free Trial',
       p1: 'Featured Profile', p2: 'Unlimited Services', p3: 'Priority in Search', p4: 'Verified Badge', p5: 'Analytics & Insights',
-      ctaTitle: 'Ready to Start? 🚀', ctaDesc: 'Join hundreds of Omani professionals on Injaz', ctaBtn: '🚀 Register Now — Free'
+      ctaTitle: 'Ready to Start? 🚀', ctaDesc: 'Join hundreds of Omani professionals on Injaz', ctaBtn: '🚀 Register Now — Free',
+      footerCopy: '© 2025 Injaz Platform. All rights reserved.', footerPrivacy: 'Privacy Policy', footerTerms: 'Terms & Conditions', footerContact: 'Contact Us'
     }
   };
 
@@ -1247,7 +1249,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
     const t = translations[lang];
     document.documentElement.setAttribute('dir', t.dir);
     document.documentElement.setAttribute('lang', lang);
-    const ids = ['navExplore','navHow','navPricing','navContact','navRegister','heroBadge','heroSub','heroRegisterBtn','heroSearchBtn','searchLabel','searchTitle','searchDesc','howLabel','howTitle','howDesc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','step4Title','step4Desc','pricingLabel','pricingTitle','pricingDesc','plan1Name','plan1Period','plan1Desc','plan1Btn','f1','f2','f3','f4','featuredBadge','plan2Name','plan2Period','plan2Desc','plan2Btn','p1','p2','p3','p4','p5','ctaTitle','ctaDesc','ctaBtn'];
+    const ids = ['navExplore','navHow','navPricing','navContact','navRegister','heroBadge','heroSub','heroRegisterBtn','heroSearchBtn','searchLabel','searchTitle','searchDesc','howLabel','howTitle','howDesc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','step4Title','step4Desc','pricingLabel','pricingTitle','pricingDesc','plan1Name','plan1Period','plan1Desc','plan1Btn','f1','f2','f3','f4','featuredBadge','plan2Name','plan2Period','plan2Desc','plan2Btn','p1','p2','p3','p4','p5','ctaTitle','ctaDesc','ctaBtn','footerCopy','footerPrivacy','footerTerms','footerContact'];
     ids.forEach(id => { const el = document.getElementById(id); if(el) el.textContent = t[id]; });
     document.getElementById('heroTitle').innerHTML = t.heroTitle;
     document.getElementById('heroDesc').innerHTML = t.heroDesc;
