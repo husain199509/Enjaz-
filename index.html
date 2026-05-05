@@ -938,17 +938,17 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
   </div>
 
   <div class="categories">
-    <div class="cat-chip active">🎨 تصميم</div>
-    <div class="cat-chip">📸 تصوير</div>
-    <div class="cat-chip">🏗️ هندسة</div>
-    <div class="cat-chip">🪵 نجارة</div>
-    <div class="cat-chip">👗 أزياء</div>
-    <div class="cat-chip">💻 برمجة</div>
-    <div class="cat-chip">✍️ كتابة</div>
-    <div class="cat-chip">🍳 طبخ</div>
-    <div class="cat-chip">🎵 موسيقى</div>
-    <div class="cat-chip">🔧 صيانة</div>
-    <div class="cat-chip">📊 محاسبة</div>
+    <div class="cat-chip active" id="cat1">🎨 تصميم</div>
+    <div class="cat-chip" id="cat2">📸 تصوير</div>
+    <div class="cat-chip" id="cat3">🏗️ هندسة</div>
+    <div class="cat-chip" id="cat4">🪵 نجارة</div>
+    <div class="cat-chip" id="cat5">👗 أزياء</div>
+    <div class="cat-chip" id="cat6">💻 برمجة</div>
+    <div class="cat-chip" id="cat7">✍️ كتابة</div>
+    <div class="cat-chip" id="cat8">🍳 طبخ</div>
+    <div class="cat-chip" id="cat9">🎵 موسيقى</div>
+    <div class="cat-chip" id="cat10">🔧 صيانة</div>
+    <div class="cat-chip" id="cat11">📊 محاسبة</div>
     <div class="cat-chip" id="moreChip">+ المزيد</div>
   </div>
 </section>
@@ -1206,6 +1206,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       heroDesc: 'منصة إنجاز تربط أصحاب المهارات والحرف بمن يحتاجهم.<br>سواء كنت مصمم، مهندس، مصور، نجار، أو أي حرفة أخرى — مكانك هنا.',
       heroRegisterBtn: '🚀 سجّل خدمتك مجاناً', heroSearchBtn: '🔍 ابحث عن محترف',
       stat1: 'محترف مسجّل', stat2: 'تخصص وحرفة', stat3: 'صفقة ناجحة', stat4: 'متوسط التقييم',
+      cat1: '🎨 تصميم', cat2: '📸 تصوير', cat3: '🏗️ هندسة', cat4: '🪵 نجارة', cat5: '👗 أزياء', cat6: '💻 برمجة', cat7: '✍️ كتابة', cat8: '🍳 طبخ', cat9: '🎵 موسيقى', cat10: '🔧 صيانة', cat11: '📊 محاسبة', moreChip: '+ المزيد',
       searchLabel: 'استكشف المواهب', searchTitle: 'ابحث عن الخدمة اللي تحتاجها', searchDesc: 'من التصميم إلى البناء، من الفن إلى التقنية — كل المهارات بمكان واحد', searchPlaceholder: 'ابحث عن: مصمم، نجار، مصور، مهندس...',
       howLabel: 'كيف يعمل إنجاز؟', howTitle: 'بسيط وسريع', howDesc: '3 خطوات وتبدأ',
       step1Title: 'سجّل حسابك', step1Desc: 'أنشئ بروفايلك في دقيقتين. أضف صورتك، خدماتك، وأسعارك. الأول 30 يوم مجاناً.',
@@ -1229,6 +1230,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       heroDesc: "Injaz connects skilled professionals with those who need them.<br>Whether you're a designer, engineer, photographer, or carpenter — you belong here.",
       heroRegisterBtn: '🚀 Register Free', heroSearchBtn: '🔍 Find a Professional',
       stat1: 'Registered Professionals', stat2: 'Skills & Crafts', stat3: 'Successful Deals', stat4: 'Average Rating',
+      cat1: '🎨 Design', cat2: '📸 Photography', cat3: '🏗️ Engineering', cat4: '🪵 Carpentry', cat5: '👗 Fashion', cat6: '💻 Programming', cat7: '✍️ Writing', cat8: '🍳 Cooking', cat9: '🎵 Music', cat10: '🔧 Maintenance', cat11: '📊 Accounting', moreChip: '+ More',
       searchLabel: 'Explore Talent', searchTitle: 'Find the Service You Need', searchDesc: 'From design to construction, from art to tech — all skills in one place', searchPlaceholder: 'Search for: designer, carpenter, photographer...',
       howLabel: 'How Injaz Works', howTitle: 'Simple & Fast', howDesc: '3 steps and you\'re in',
       step1Title: 'Register', step1Desc: 'Create your profile in minutes. Add your photo, services, and prices. First 30 days free.',
@@ -1251,7 +1253,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
     const t = translations[lang];
     document.documentElement.setAttribute('dir', t.dir);
     document.documentElement.setAttribute('lang', lang);
-    const ids = ['navExplore','navHow','navPricing','navContact','navRegister','heroBadge','heroSub','heroRegisterBtn','heroSearchBtn','stat1','stat2','stat3','stat4','searchLabel','searchTitle','searchDesc','howLabel','howTitle','howDesc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','step4Title','step4Desc','pricingLabel','pricingTitle','pricingDesc','plan1Name','plan1Period','plan1Desc','plan1Btn','f1','f2','f3','f4','featuredBadge','plan2Name','plan2Period','plan2Desc','plan2Btn','p1','p2','p3','p4','p5','ctaTitle','ctaDesc','ctaBtn','footerCopy','footerPrivacy','footerTerms','footerContact'];
+    const ids = ['navExplore','navHow','navPricing','navContact','navRegister','heroBadge','heroSub','heroRegisterBtn','heroSearchBtn','stat1','stat2','stat3','stat4','cat1','cat2','cat3','cat4','cat5','cat6','cat7','cat8','cat9','cat10','cat11','moreChip','searchLabel','searchTitle','searchDesc','howLabel','howTitle','howDesc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','step4Title','step4Desc','pricingLabel','pricingTitle','pricingDesc','plan1Name','plan1Period','plan1Desc','plan1Btn','f1','f2','f3','f4','featuredBadge','plan2Name','plan2Period','plan2Desc','plan2Btn','p1','p2','p3','p4','p5','ctaTitle','ctaDesc','ctaBtn','footerCopy','footerPrivacy','footerTerms','footerContact'];
     ids.forEach(id => { const el = document.getElementById(id); if(el) el.textContent = t[id]; });
     document.getElementById('heroTitle').innerHTML = t.heroTitle;
     document.getElementById('heroDesc').innerHTML = t.heroDesc;
