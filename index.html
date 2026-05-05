@@ -909,19 +909,19 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 <div class="stats-bar">
   <div class="stat-item">
     <span class="stat-num">+500</span>
-    <span class="stat-label">محترف مسجّل</span>
+    <span class="stat-label" id="stat1">محترف مسجّل</span>
   </div>
   <div class="stat-item">
     <span class="stat-num">+80</span>
-    <span class="stat-label">تخصص وحرفة</span>
+    <span class="stat-label" id="stat2">تخصص وحرفة</span>
   </div>
   <div class="stat-item">
     <span class="stat-num">+1200</span>
-    <span class="stat-label">صفقة ناجحة</span>
+    <span class="stat-label" id="stat3">صفقة ناجحة</span>
   </div>
   <div class="stat-item">
     <span class="stat-num">4.9★</span>
-    <span class="stat-label">متوسط التقييم</span>
+    <span class="stat-label" id="stat4">متوسط التقييم</span>
   </div>
 </div>
 
@@ -1205,6 +1205,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       heroSub: 'Register Your Skills. Get Hired.',
       heroDesc: 'منصة إنجاز تربط أصحاب المهارات والحرف بمن يحتاجهم.<br>سواء كنت مصمم، مهندس، مصور، نجار، أو أي حرفة أخرى — مكانك هنا.',
       heroRegisterBtn: '🚀 سجّل خدمتك مجاناً', heroSearchBtn: '🔍 ابحث عن محترف',
+      stat1: 'محترف مسجّل', stat2: 'تخصص وحرفة', stat3: 'صفقة ناجحة', stat4: 'متوسط التقييم',
       searchLabel: 'استكشف المواهب', searchTitle: 'ابحث عن الخدمة اللي تحتاجها', searchDesc: 'من التصميم إلى البناء، من الفن إلى التقنية — كل المهارات بمكان واحد', searchPlaceholder: 'ابحث عن: مصمم، نجار، مصور، مهندس...',
       howLabel: 'كيف يعمل إنجاز؟', howTitle: 'بسيط وسريع', howDesc: '3 خطوات وتبدأ',
       step1Title: 'سجّل حسابك', step1Desc: 'أنشئ بروفايلك في دقيقتين. أضف صورتك، خدماتك، وأسعارك. الأول 30 يوم مجاناً.',
@@ -1227,6 +1228,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       heroSub: 'سجّل مهارتك. واحصل على عمل.',
       heroDesc: "Injaz connects skilled professionals with those who need them.<br>Whether you're a designer, engineer, photographer, or carpenter — you belong here.",
       heroRegisterBtn: '🚀 Register Free', heroSearchBtn: '🔍 Find a Professional',
+      stat1: 'Registered Professionals', stat2: 'Skills & Crafts', stat3: 'Successful Deals', stat4: 'Average Rating',
       searchLabel: 'Explore Talent', searchTitle: 'Find the Service You Need', searchDesc: 'From design to construction, from art to tech — all skills in one place', searchPlaceholder: 'Search for: designer, carpenter, photographer...',
       howLabel: 'How Injaz Works', howTitle: 'Simple & Fast', howDesc: '3 steps and you\'re in',
       step1Title: 'Register', step1Desc: 'Create your profile in minutes. Add your photo, services, and prices. First 30 days free.',
@@ -1249,7 +1251,7 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
     const t = translations[lang];
     document.documentElement.setAttribute('dir', t.dir);
     document.documentElement.setAttribute('lang', lang);
-    const ids = ['navExplore','navHow','navPricing','navContact','navRegister','heroBadge','heroSub','heroRegisterBtn','heroSearchBtn','searchLabel','searchTitle','searchDesc','howLabel','howTitle','howDesc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','step4Title','step4Desc','pricingLabel','pricingTitle','pricingDesc','plan1Name','plan1Period','plan1Desc','plan1Btn','f1','f2','f3','f4','featuredBadge','plan2Name','plan2Period','plan2Desc','plan2Btn','p1','p2','p3','p4','p5','ctaTitle','ctaDesc','ctaBtn','footerCopy','footerPrivacy','footerTerms','footerContact'];
+    const ids = ['navExplore','navHow','navPricing','navContact','navRegister','heroBadge','heroSub','heroRegisterBtn','heroSearchBtn','stat1','stat2','stat3','stat4','searchLabel','searchTitle','searchDesc','howLabel','howTitle','howDesc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','step4Title','step4Desc','pricingLabel','pricingTitle','pricingDesc','plan1Name','plan1Period','plan1Desc','plan1Btn','f1','f2','f3','f4','featuredBadge','plan2Name','plan2Period','plan2Desc','plan2Btn','p1','p2','p3','p4','p5','ctaTitle','ctaDesc','ctaBtn','footerCopy','footerPrivacy','footerTerms','footerContact'];
     ids.forEach(id => { const el = document.getElementById(id); if(el) el.textContent = t[id]; });
     document.getElementById('heroTitle').innerHTML = t.heroTitle;
     document.getElementById('heroDesc').innerHTML = t.heroDesc;
@@ -1264,6 +1266,12 @@ footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       chip.classList.add('active');
     });
   });
+
+  // Force Arabic on load
+  window.onload = function() {
+    isArabic = false;
+    toggleLang();
+  };
 
   // Pro card contact buttons
   document.querySelectorAll('.contact-btn').forEach(btn => {
